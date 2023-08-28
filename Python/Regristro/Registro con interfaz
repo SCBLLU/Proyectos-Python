@@ -1,0 +1,40 @@
+from tkinter import *
+
+def ingresar_datos():
+    ventana_datos = Toplevel()
+    ventana_datos.title("Ingresar datos")
+    
+    etiqueta_nombre = Label(ventana_datos, text="Nombre:")
+    etiqueta_nombre.grid(row=0, column=0, padx=5, pady=5)
+    entrada_nombre = Entry(ventana_datos)
+    entrada_nombre.grid(row=0, column=1, padx=5, pady=5)
+    
+    etiqueta_edad = Label(ventana_datos, text="Edad:")
+    etiqueta_edad.grid(row=1, column=0, padx=5, pady=5)
+    entrada_edad = Entry(ventana_datos)
+    entrada_edad.grid(row=1, column=1, padx=5, pady=5)
+    
+    etiqueta_correo = Label(ventana_datos, text="Correo:")
+    etiqueta_correo.grid(row=2, column=0, padx=5, pady=5)
+    entrada_correo = Entry(ventana_datos)
+    entrada_correo.grid(row=2, column=1, padx=5, pady=5)
+    
+    def registrar_datos():
+        nombre = entrada_nombre.get()
+        edad = entrada_edad.get()
+        correo = entrada_correo.get()
+        print("Gracias por ingresar sus datos, los datos registrados son los siguientes:") 
+        print("  Su nombre es " + nombre + " y su edad es de " + edad + " años.") 
+        print("  Su correo electrónico a registar es el siguiente: " + correo )
+        ventana_datos.destroy()
+    
+    boton_registrar = Button(ventana_datos, text="Registrar", command=registrar_datos)
+    boton_registrar.grid(row=3, column=1, padx=5, pady=5)
+
+ventana = Tk()
+ventana.title("Registro")
+
+boton = Button(ventana, text="Ingresar datos", command=ingresar_datos)
+boton.pack()
+
+ventana.mainloop()

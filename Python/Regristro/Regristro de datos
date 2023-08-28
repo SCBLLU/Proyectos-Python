@@ -1,0 +1,17 @@
+while True:
+        print("Bienvenidos al sistema, por favor complete el registro")
+        print("              Ingrese datos validos")
+        print("")
+        nombre = input("Ingrese su nombre: ")
+        edad = input("Ingrese su edad: ")
+        correo = input("Ingrese su correo: ")
+        print("")
+        print("Los datos a registar son los siguientes:") 
+        print("  Su nombre es " + nombre + " y su edad es de " + edad + " años") 
+        print("  Su correo electrónico a registar es el siguiente: " + correo )
+        print("")
+        opcion = input("¿Desea realizar un cambio? (s/n) ")
+        if opcion.lower() == "n":
+            break
+print("")
+print("Gracias los datos han sido regristrados")
